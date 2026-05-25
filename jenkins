@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone GitHub Repository') {
+            steps {
+                git branch: 'main', url: 'https://github.com/devika005/jenkins-pipeline.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Build Successful'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deployment Successful'
+            }
+        }
+    }
+}
